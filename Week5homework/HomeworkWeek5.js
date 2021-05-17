@@ -241,3 +241,47 @@ let siteandEmail = [];
 user1.forEach(user => siteandEmail.push(`${user.website}: ${user.email}`));
 
 console.table(siteandEmail);
+
+// create a list of user 9's to-dos
+
+let user9Tasks = toDo.filter((nine) =>
+  nine.userId === 9 && nine.completed === false);
+
+console.log(user9Tasks);
+//then find the number of user 9's incomplete tasks
+
+console.log(`User 9 has ${user9Tasks.length} incomplete tasks`);
+
+let user5 = post.filter((posty) => posty.userId === 5)
+
+let user5Posts = user5.map((posty) => posty.title)
+//console.log(user5);
+
+//then, create a list of title and body pairs
+let allTitleBody = post.map((posty) => [posty.title, posty.body])
+console.log(allTitleBody);
+
+class general {
+  constructor(history, math, science) {
+    this.history = history;
+    this.math = math;
+    this.science = science;
+  }
+Welcome() {
+  return `Hello! I teach ${this.history}`;
+}
+};
+class general extends teacher {
+  constructor(history, math, science, gym) {
+      super(history, math, science);
+  this.gym = gym;
+}
+Greetings() {
+  return `Hello! I teach ${this.history}, and I assistant teach ${this.gym}`;
+}
+};
+console.log
+
+
+
+
